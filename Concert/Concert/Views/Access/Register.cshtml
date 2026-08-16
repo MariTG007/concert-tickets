@@ -1,0 +1,26 @@
+﻿@model Concert.Models.TicketViewModel;
+
+@{
+    ViewData["Title"] = "Register";
+}
+<h1>Registro</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Register" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Entrances" />
+            <input type="hidden" asp-for="EntranceId" />
+            <partial name="_RegisterTicket"/>
+            <div class="form-group mt-2">
+                 <input type="submit" value="Validar" class="btn btn-outline-primary" />
+                <a asp-action="CheckTicket" class="btn btn-outline-secondary">Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

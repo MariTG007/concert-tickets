@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Concert.Data.Entities.Ticket>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido!</h1>
+     <h1 class="display-4">Dirigirse A Boletos Para Verificarlo</h1>
+   
+</div>
+
+
+
+
+
+
+
+@*
+@model IEnumerable<Concert.Data.Entities.Ticket>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+
+ <div class="panel-heading">
+     <h3 class="panel-title">Boleto</h3>
+ </div>
+<p>
+    <a asp-action="CheckTicket" class="btn btn-outline-primary">Validar Boleto</a>
+</p>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+           
+            <div class="panel-body">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+}*@
